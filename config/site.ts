@@ -1,6 +1,7 @@
 export type SiteConfig = typeof siteConfig;
+type StatusColor = "primary" | "warning" | "success" | "default";
 
-export const statusColorMap = {
+export const statusColorMap: Record<string, StatusColor> = {
   ontime: "primary",
   delayed: "warning",
   boarding: "success",
