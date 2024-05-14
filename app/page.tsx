@@ -127,15 +127,15 @@ export default function Home() {
 
 	}, [])
 
-	// useEffect(() => {
-	// 	const interval = setInterval(async () => {
-	// 		let json = await fetchData(null);
-	// 		json.forEach((item: any) => {
-	// 			list.update(item.id, item);
-	// 		})
-	// 	}, 30 * 1000);
-	// 	return () => clearInterval(interval);
-	// }, [list]);
+	useEffect(() => {
+		const interval = setInterval(async () => {
+			let json = await fetchData(null);
+			json.forEach((item: any) => {
+				list.update(item.id, item);
+			})
+		}, 30 * 1000);
+		return () => clearInterval(interval);
+	}, [list]);
 
 	return (
 		<section className="">
